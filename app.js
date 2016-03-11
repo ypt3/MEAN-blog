@@ -9,7 +9,9 @@ var passport = require('passport');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/news');
+// mongoose.connect('mongodb://localhost/news');
+mongoose.connect('mongodb://bloguser:123456@ds011399.mlab.com:11399/meanblog');
+
 
 require('./models/Posts');
 require('./models/Comments');
