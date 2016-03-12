@@ -39,13 +39,16 @@
           <a ng-show="post.link" href="{{post.link}}">
             {{post.title}}
           </a>
+          <br>
           <span ng-hide="post.link">
             {{post.title}}
           </span>
+          <br>
           <span ng-show="post.author">
             posted by <a>{{post.author}}</a> |
           </span>
-          <span>
+          <br>
+          <span style='margin-left: 120px;'>
             <a href="#/posts/{{post._id}}">Comments</a>
             ({{post.comments.length}})
           </span>
@@ -88,6 +91,7 @@
         <span class="glyphicon glyphicon-thumbs-down" ng-click="downvote(comment)"></span>
         - by {{comment.author}}
         <span style='font-size:20px; margin-left:10px'>
+        <br>
           {{comment.body}}
         </span>
       </div>
@@ -132,7 +136,7 @@
       <div class="page-header">
         <h1 style="text-align:center">MEAN Blog</h1>
       </div>
-      
+
       <div ng-show="error" class="alert alert-danger row">
         <span>{{ error.message }}</span>
       </div>
